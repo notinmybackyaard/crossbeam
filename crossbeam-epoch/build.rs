@@ -48,6 +48,9 @@ fn main() {
         println!("cargo:rustc-cfg=crossbeam_no_atomic_cas");
     }
 
+    if !cfg.probe_rustc_version(1, 51) {
+        println!("cargo:rustc-cfg=crossbeam_no_raw_ref_macros");
+    }
     if !cfg.probe_rustc_version(1, 61) {
         println!("cargo:rustc-cfg=crossbeam_no_const_fn_trait_bound");
     }
