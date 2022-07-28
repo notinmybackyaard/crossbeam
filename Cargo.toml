@@ -33,6 +33,13 @@ std = [
 # This is enabled by default and also enabled if the `std` feature is enabled.
 alloc = ["crossbeam-epoch/alloc", "crossbeam-queue/alloc"]
 
+# Enable to use of unstable functionality.
+# This is disabled by default and requires recent nightly compiler.
+#
+# NOTE: This feature is outside of the normal semver guarantees and minor or
+# patch versions of crossbeam may make breaking changes to them at any time.
+nightly = ["crossbeam-epoch/nightly", "crossbeam-utils/nightly", "crossbeam-queue/nightly"]
+
 [dependencies]
 cfg-if = "1"
 
@@ -79,7 +86,3 @@ members = [
   "crossbeam-skiplist",
   "crossbeam-utils",
 ]
-
-[patch.crates-io]
-# https://github.com/matklad/once_cell/pull/185
-once_cell = { git = "https://github.com/saethlin/once_cell.git", rev = "4aa5ac4aa30b9eed4a0848f3ad22a5eeb025760d" }

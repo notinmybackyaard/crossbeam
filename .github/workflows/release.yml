@@ -9,6 +9,10 @@ on:
       - crossbeam-[0-9]+.*
       - crossbeam-[a-z]+-[0-9]+.*
 
+env:
+  RUSTFLAGS: -Dwarnings
+  RUST_BACKTRACE: 1
+
 defaults:
   run:
     shell: bash
@@ -32,7 +36,6 @@ jobs:
       # TODO: Consider moving crossbeam crate to a subdirectory.
       - uses: taiki-e/create-gh-release-action@v1
         with:
-          prefix: crossbeam(-[a-z]+)?
           changelog: CHANGELOG.md
           title: crossbeam $version
           branch: master

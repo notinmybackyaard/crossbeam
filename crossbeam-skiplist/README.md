@@ -12,15 +12,11 @@ https://docs.rs/crossbeam-skiplist)
 https://www.rust-lang.org)
 [![chat](https://img.shields.io/discord/569610676205781012.svg?logo=discord)](https://discord.com/invite/JXYwgWZ)
 
-This crate provides the types [`SkipMap`] and [`SkipSet`].
-These data structures provide an interface similar to `BTreeMap` and `BTreeSet`,
-respectively, except they support safe concurrent access across multiple threads.
+**Note:** This crate is still a work in progress.
 
 This crate can be used in `no_std` environments that implement `alloc`. The `alloc` feature of this crate needs to be enabled in `no_std` environments.
 
-[`SkipMap`]: https://docs.rs/crossbeam-skiplist/latest/crossbeam_skiplist/struct.SkipMap.html
-[`SkipSet`]: https://docs.rs/crossbeam-skiplist/latest/crossbeam_skiplist/struct.SkipSet.html
-
+<!--
 ## Usage
 
 Add this to your `Cargo.toml`:
@@ -29,6 +25,7 @@ Add this to your `Cargo.toml`:
 [dependencies]
 crossbeam-skiplist = "0.1"
 ```
+-->
 
 ## Compatibility
 
